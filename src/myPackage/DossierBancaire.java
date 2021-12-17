@@ -9,6 +9,8 @@ public class DossierBancaire {
     	_soldeCE = new CompteEpargne();
     }
 
+    
+    //Méthodes publiques (= Fonctions)
     public void deposer(double value) //Dépot sur les deux comptes
     {
     	_soldeCC.deposer(value*0.4);
@@ -25,6 +27,7 @@ public class DossierBancaire {
     	_soldeCE.remunerer();
     }
 	
+    // Propriétés (= Variables)
     private CompteCourant _soldeCC;
     private CompteEpargne _soldeCE;
 }
