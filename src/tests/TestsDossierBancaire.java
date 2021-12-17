@@ -14,7 +14,7 @@ public class TestsDossierBancaire {
 		DossierBancaire dossier = new DossierBancaire();
 		assertEquals(0, dossier.get_solde(), 0);
 		dossier.deposer(100);
-		assertEquals(100, dossier.get_solde(), 0); //voir documentation en ligne sur assertions Junit 
+		assertEquals(100, dossier.get_solde(), 0);
 	}
 
 	@Test
