@@ -1,14 +1,13 @@
 package myPackage;
 
-public class CompteEpargne {
+public class CompteEpargne extends Compte{
 	
-	public CompteEpargne()
-	{
-		_solde = 0;
+	public CompteEpargne() {
+		super();
 	}
-	public void deposer(double value) {_solde += value;}
-	public double get_solde() {return _solde;}
-	public void remunerer() {_solde *= 1.032;}
-	
-	private double _solde;
+
+	public void remunerer() {
+		deposer(get_solde()*0.032);
+	}
+
 }

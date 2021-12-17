@@ -2,18 +2,15 @@ package myPackage;
 
 public class Compte {
 	
-	public Compte() // Constructeur
-    {
+	public Compte() {// Constructeur
     	_solde = 0;
     }
 	
-	public void deposer(double value)
-	{
+	public void deposer(double value) {
 		_solde += value;
 	}
 	
-    public double get_solde()
-    {
+    public double get_solde() {
     	return _solde;
     }
 	
