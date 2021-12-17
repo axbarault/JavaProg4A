@@ -6,23 +6,25 @@ public class DossierBancaire {
     public DossierBancaire()
     {
     	_soldeCC = new CompteCourant();
-    	_soldeE = new CompteEpargne();
+    	_soldeCE = new CompteEpargne();
     }
 
-    public void deposer(double value) 
+    public void deposer(double value) //Dépot sur les deux comptes
     {
     	_soldeCC.deposer(value*0.4);
-    	_soldeE.deposer(value*0.6);
+    	_soldeCE.deposer(value*0.6);
     }
-    public double get_solde() 
+    
+    public double get_solde() // retourne la somme des soldes des deux comptes 
     {
-    	return _soldeCC.get_solde() + _soldeE.get_solde();
+    	return _soldeCC.get_solde() + _soldeCE.get_solde();
     }
-    public void remunerer() 
+    
+    public void remunerer() // Applique la rémunération du compte Épargne 
     {
-    	_soldeE.remunerer();
+    	_soldeCE.remunerer();
     }
 	
     private CompteCourant _soldeCC;
-    private CompteEpargne _soldeE;
+    private CompteEpargne _soldeCE;
 }
