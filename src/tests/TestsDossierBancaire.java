@@ -33,7 +33,7 @@ public class TestsDossierBancaire {
 		DossierBancaire dossier = new DossierBancaire();
 		dossier.deposer(100);
 		dossier.remunerer();
-		assertEquals(100, dossier.get_solde(), 0);
+		assertEquals(100*0.4+100*0.6*1.032, dossier.get_solde(), 0);
 	}
 
 }
