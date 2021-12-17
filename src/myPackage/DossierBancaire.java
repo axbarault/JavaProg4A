@@ -5,7 +5,7 @@ public class DossierBancaire {
 	//Constructeur
     public DossierBancaire()
     {
-    	_soldeCC = new CompteCourant();
+    	_soldeCC = new Compte();
     	_soldeE = new CompteEpargne();
     }
 
@@ -14,15 +14,17 @@ public class DossierBancaire {
     	_soldeCC.deposer(value*0.4);
     	_soldeE.deposer(value*0.6);
     }
+    
     public double get_solde() 
     {
     	return _soldeCC.get_solde() + _soldeE.get_solde();
     }
+    
     public void remunerer() 
     {
     	_soldeE.remunerer();
     }
 	
-    private CompteCourant _soldeCC;
+    private Compte _soldeCC;
     private CompteEpargne _soldeE;
 }
