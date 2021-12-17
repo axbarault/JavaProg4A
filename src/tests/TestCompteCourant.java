@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import myPackage.CompteCourant;
+import myPackage.Compte;
 import myPackage.DossierBancaire;
 
 public class TestCompteCourant {
@@ -12,7 +12,7 @@ public class TestCompteCourant {
 	@Test  
 	public void testGetSolde() 
 	{
-		CompteCourant compte = new CompteCourant();
+		Compte compte = new Compte();
 		assertEquals(0, compte.get_solde(), 0);
 		compte.deposer(100);
 		assertEquals(100, compte.get_solde(), 0);
@@ -21,7 +21,7 @@ public class TestCompteCourant {
 	@Test
 	public void testDeposer()
 	{
-		CompteCourant compte = new CompteCourant();
+		Compte compte = new Compte();
 		compte.deposer(100);
 		assertEquals(100, compte.get_solde(), 0);
 		compte.deposer(150);

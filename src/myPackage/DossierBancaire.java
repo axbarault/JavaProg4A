@@ -5,7 +5,7 @@ public class DossierBancaire {
 	//Constructeur
     public DossierBancaire()
     {
-    	_soldeCC = new CompteCourant();
+    	_soldeCC = new Compte();
     	_soldeCE = new CompteEpargne();
     }
 
@@ -28,6 +28,6 @@ public class DossierBancaire {
     }
 	
     // Propriétés (= Variables)
-    private CompteCourant _soldeCC;
+    private Compte _soldeCC;
     private CompteEpargne _soldeCE;
 }
