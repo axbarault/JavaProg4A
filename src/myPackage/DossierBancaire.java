@@ -5,12 +5,12 @@ public class DossierBancaire {
 	//Constructeur
     public DossierBancaire()
     {
-    	m_solde=0;
+    	_soldeCC = new CompteCourant();
     }
 
-    public void deposer(double value) {m_solde+=value;}
-    public double get_solde() {return m_solde;}
+    public void deposer(double value) {_soldeCC.deposer(value);}
+    public double get_solde() {return _soldeCC.get_solde();}
     public void remunerer() {}
 	
-    private double m_solde;
+    private CompteCourant _soldeCC;
 }
