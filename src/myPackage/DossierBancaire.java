@@ -26,6 +26,15 @@ public class DossierBancaire {
     {
     	_soldeCE.remunerer();
     }
+    
+    public void retirer(double value) throws Exception{
+    	try {
+    		_soldeCC.retirer(value);
+    	}
+    	catch(Exception e) {
+    		throw new Exception(e.getMessage());
+    	}
+    }
 	
     // Propriétés (= Variables)
     private Compte _soldeCC;

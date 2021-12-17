@@ -7,12 +7,22 @@ public class Compte {
     }
 	
 	public void deposer(double value) {
-		_solde += value;
+		if(value > 0) {
+			_solde += value;
+		}
 	}
 	
     public double get_solde() {
     	return _solde;
     }
 	
+    public void retirer(double value) throws Exception {
+    	if (value > _solde) {
+    		throw new Exception("Solde insuffisant");
+    	} else {
+    		_solde -= value;
+    	}
+    }
+    
 	private double _solde;
 }
